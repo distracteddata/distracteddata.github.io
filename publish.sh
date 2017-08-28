@@ -2,7 +2,6 @@
 
 # Generate the Slides and Pages
 jupyter-nbconvert Notebooks/Index.ipynb --reveal-prefix=reveal.js
-mv Notebooks/index.html  index.html
 
 cd Notebooks
 arr=(*.ipynb)
@@ -24,6 +23,8 @@ for f in "${arr[@]}"; do
    mv Notebooks/"$filename".md  Markdown/"$filename".md
 
 done
+
+cp Html/index.html index.html
 
 # Push the updates to gh-pages
 mkdir -p /tmp/workspace
