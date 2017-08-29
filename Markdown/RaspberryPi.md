@@ -12,7 +12,7 @@
 7. Click the wifi icon and connect to wireless
 7. `sudo apt-get update`
 8. `sudo apt-get upgrade`
-9. Don't forget to change the default password: `passwd`
+9. Don't forget to change the default password!: `passwd`
 
 
 ---
