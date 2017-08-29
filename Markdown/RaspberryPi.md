@@ -1,4 +1,5 @@
 
+###### [home..](https://distracteddata.github.io)
 ## Raspberry Pi
 
 ### Quick Setup:
@@ -32,8 +33,3 @@
 ### Enable Remote Desktop
 1. `sudo apt-get install tightvncserver`
 2. `sudo apt-get install xrdp`
-
-
-```python
-
-```

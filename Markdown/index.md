@@ -17,4 +17,4 @@ This website is created using [Jupyter Notebooks](https://github.com/ChrisRackau
 - Numpy
 - Data Visualization
 - Machine Learning
-- Raspberry Pi *(coming soon)*
+- [Raspberry Pi](https://distracteddata.github.io/Html/RaspberryPi.html)
