@@ -34,7 +34,7 @@ git commit -m "Updates"
 git checkout -B gh-pages
 cp -r /tmp/workspace/* .
 git add -A .
-git commit -m "Updates"
+git commit -m $@
 git push origin master gh-pages
 git checkout master
 rm -rf /tmp/workspace
