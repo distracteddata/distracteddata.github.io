@@ -50,8 +50,24 @@
     
 
     
+        
     <url>
-     <loc>https://distracteddata.github.io/RaspberryPi/</loc>
+     <loc>https://distracteddata.github.io/Raspberry_Pi/setup/</loc>
+     <lastmod>2017-09-01</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://distracteddata.github.io/Raspberry_Pi/picam/</loc>
+     <lastmod>2017-09-01</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+    <url>
+     <loc>https://distracteddata.github.io/failed_banks/</loc>
      <lastmod>2017-09-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
