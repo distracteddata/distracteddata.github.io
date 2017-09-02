@@ -37,7 +37,7 @@
         },
         {
             "location": "/Raspberry_Pi/setup/",
-            "text": "These are my 'quick setup' notes for getting a fresh pi up and running\n\n\nRaspberry Pi Quick Setup:\n\n\n\n\nDownload \nNoobs\n\n\nDownload \nSD Card Formatter\n\n\nFormat SD Card (Don't use quick option), no Volume needed\n\n\nExtract Noobs zip and copy contents to SD card\n\n\nInsert SD card into Raspberry Pi\n\n\nPower up Raspberry Pi and install the Raspbian distro\n\n\nClick the wifi icon and connect to wireless\n\n\nsudo apt-get update\n\n\nsudo apt-get upgrade\n\n\nDon't forget to change the default password!: \npasswd\n\n\n\n\n\n\nRemove Wolfram Whatever\n\n\n\n\nsudo apt-get purge wolfram-engine\n\n\nsudo apt-get autoremove\n\n\nsudo apt-get update\n\n\nsudo apt-get upgrade\n\n\n\n\n\n\nEnable SSH\n\n\n\n\nifconfig\n - retrieve IP address\n\n\nsudo raspi-config\n\n\nInterfacing Options\n > \nEnable SSH\n\n\nDon't forget to change wifi password from default:\n \npasswd\n\n\n\n\n\n\nEnable Remote Desktop\n\n\n\n\nsudo apt-get install tightvncserver\n\n\nsudo apt-get install xrdp",
+            "text": "These are my 'quick setup' notes for getting a fresh pi up and running\n\n\nRaspberry Pi Quick Setup:\n\n\n\n\nDownload \nNoobs\n\n\nDownload \nSD Card Formatter\n\n\nFormat SD Card (Don't use quick option), no Volume needed\n\n\nExtract Noobs zip and copy contents to SD card\n\n\nInsert SD card into Raspberry Pi\n\n\nPower up Raspberry Pi and install the Raspbian distro\n\n\nClick the wifi icon and connect to wireless\n\n\nsudo apt-get update\n\n\nsudo apt-get upgrade\n\n\nDon't forget to change the default password!: \npasswd\n\n\n\n\n\n\nRemove Wolfram Whatever\n\n\n\n\nsudo apt-get purge wolfram-engine\n\n\nsudo apt-get autoremove\n\n\nsudo apt-get update\n\n\nsudo apt-get upgrade\n\n\n\n\n\n\nEnable SSH\n\n\n\n\nifconfig\n - retrieve IP address\n\n\nsudo raspi-config\n\n\nInterfacing Options\n > \nEnable SSH\n\n\nDon't forget to change wifi password from default:\n \npasswd\n\n\n\n\n\n\nEnable Remote Desktop\n\n\n\n\nsudo apt-get install tightvncserver\n\n\nsudo apt-get install xrdp\n\n\n\n\n\n\nInstall Miniconda\n\n\n\n\nDownload \nminiconda3-latest-Linux-armv7l.sh\n\n\nsudo bash miniconda3-latest-Linux-armv7l.sh\n\n\nconda install pandas\n\n\nconda install ipython\n\n\nconda install nltk\n\n\nconda install flask\n\n\nconda install scikit-learn",
             "title": "Setup"
         },
         {
@@ -59,6 +59,11 @@
             "location": "/Raspberry_Pi/setup/#enable-remote-desktop",
             "text": "sudo apt-get install tightvncserver  sudo apt-get install xrdp",
             "title": "Enable Remote Desktop"
+        },
+        {
+            "location": "/Raspberry_Pi/setup/#install-miniconda",
+            "text": "Download  miniconda3-latest-Linux-armv7l.sh  sudo bash miniconda3-latest-Linux-armv7l.sh  conda install pandas  conda install ipython  conda install nltk  conda install flask  conda install scikit-learn",
+            "title": "Install Miniconda"
         },
         {
             "location": "/Raspberry_Pi/picam/",
@@ -86,9 +91,14 @@
             "title": "Usage"
         },
         {
-            "location": "/failed_banks/",
-            "text": "",
-            "title": "Failed Banks (coming soon)"
+            "location": "/Projects/failed_banks/",
+            "text": "coming soon",
+            "title": "Failed Banks Analysis"
+        },
+        {
+            "location": "/Projects/ge_corn/",
+            "text": "coming soon",
+            "title": "Genetically Engineered Corn"
         }
     ]
 }

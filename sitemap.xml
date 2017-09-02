@@ -4,7 +4,7 @@
     
     <url>
      <loc>https://distracteddata.github.io/</loc>
-     <lastmod>2017-09-01</lastmod>
+     <lastmod>2017-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,7 +12,7 @@
     
     <url>
      <loc>https://distracteddata.github.io/about/</loc>
-     <lastmod>2017-09-01</lastmod>
+     <lastmod>2017-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -20,7 +20,7 @@
     
     <url>
      <loc>https://distracteddata.github.io/python/</loc>
-     <lastmod>2017-09-01</lastmod>
+     <lastmod>2017-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -28,7 +28,7 @@
     
     <url>
      <loc>https://distracteddata.github.io/pandas/</loc>
-     <lastmod>2017-09-01</lastmod>
+     <lastmod>2017-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -36,7 +36,7 @@
     
     <url>
      <loc>https://distracteddata.github.io/machine_learning/</loc>
-     <lastmod>2017-09-01</lastmod>
+     <lastmod>2017-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -44,7 +44,7 @@
     
     <url>
      <loc>https://distracteddata.github.io/data_visualization/</loc>
-     <lastmod>2017-09-01</lastmod>
+     <lastmod>2017-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -53,24 +53,32 @@
         
     <url>
      <loc>https://distracteddata.github.io/Raspberry_Pi/setup/</loc>
-     <lastmod>2017-09-01</lastmod>
+     <lastmod>2017-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://distracteddata.github.io/Raspberry_Pi/picam/</loc>
-     <lastmod>2017-09-01</lastmod>
+     <lastmod>2017-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     
 
     
+        
     <url>
-     <loc>https://distracteddata.github.io/failed_banks/</loc>
-     <lastmod>2017-09-01</lastmod>
+     <loc>https://distracteddata.github.io/Projects/failed_banks/</loc>
+     <lastmod>2017-09-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
+        
+    <url>
+     <loc>https://distracteddata.github.io/Projects/ge_corn/</loc>
+     <lastmod>2017-09-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
 </urlset>
