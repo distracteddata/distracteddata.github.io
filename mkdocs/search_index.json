@@ -21,9 +21,9 @@
             "title": "Python (coming soon)"
         },
         {
-            "location": "/pandas/",
-            "text": "",
-            "title": "Pandas (coming soon)"
+            "location": "/Pandas/pandas_excel_to_html/",
+            "text": "Pandas Documentation\n\n\nimport pandas as pd\nfile_url = 'path_to_excel_file.xlsx'\ndf = pd.read_excel(file_url, sheetname='SheetX')\ndf.to_html('filename.html', justify='left')",
+            "title": "Excel to HTML"
         },
         {
             "location": "/machine_learning/",
@@ -99,6 +99,26 @@
             "location": "/Projects/ge_corn/",
             "text": "coming soon",
             "title": "Genetically Engineered Corn"
+        },
+        {
+            "location": "/links/",
+            "text": "Python\n\n\nAnaconda\n\n\nPyData\n\n\nLibraries\n\n\n[Pandas] (http://pandas.pydata.org/)\n\nMatplotlib\n\n\nBokeh\n\n\nMachine Learning\n\n\nscikit-learn\n\n\nTensorFlow\n\n\nTensorFlow for Poets",
+            "title": "Links"
+        },
+        {
+            "location": "/links/#python",
+            "text": "Anaconda  PyData",
+            "title": "Python"
+        },
+        {
+            "location": "/links/#libraries",
+            "text": "[Pandas] (http://pandas.pydata.org/) Matplotlib  Bokeh",
+            "title": "Libraries"
+        },
+        {
+            "location": "/links/#machine-learning",
+            "text": "scikit-learn  TensorFlow  TensorFlow for Poets",
+            "title": "Machine Learning"
         }
     ]
 }
