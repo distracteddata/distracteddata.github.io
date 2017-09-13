@@ -1,0 +1,823 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Python, Data, Machine Learning, Raspberry Pi, and Distractions">
+      
+      
+        <link rel="canonical" href="https://distracteddata.github.io/Projects/NYC_East_River_Bicycle_Analysis/">
+      
+      
+        <meta name="author" content="Mike Moran">
+      
+      
+        <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.10.0">
+    
+    
+      
+        <title>NYC East River Bridges Bicyle Traffic Analysis - Distracted Data</title>
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr-e826f8942a.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-b6a6d08807.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-23f75ab9c7.palette.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="red" data-md-color-accent="deep-orange">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://distracteddata.github.io" title="Distracted Data" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon md-icon--home"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  Projects
+                </span>
+              
+            
+            NYC East River Bridges Bicyle Traffic Analysis
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">&#xE5CD;</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="[\s\-]+">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <div class="md-nav__button md-logo">
+      
+        <i class="md-icon md-icon--home"></i>
+      
+    </div>
+    Distracted Data
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../about/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../python/" title="Python (coming soon)" class="md-nav__link">
+      Python (coming soon)
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Pandas
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Pandas
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Pandas/pandas_excel_to_html/" title="Excel to HTML" class="md-nav__link">
+      Excel to HTML
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../machine_learning/" title="Machine Learning (coming soon)" class="md-nav__link">
+      Machine Learning (coming soon)
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../data_visualization/" title="Data Visualization (coming soon)" class="md-nav__link">
+      Data Visualization (coming soon)
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Raspberry Pi
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Raspberry Pi
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Raspberry_Pi/setup/" title="Setup" class="md-nav__link">
+      Setup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Raspberry_Pi/picam/" title="Pi Camera" class="md-nav__link">
+      Pi Camera
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8" checked>
+    
+    <label class="md-nav__link" for="nav-8">
+      Projects
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Projects
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        NYC East River Bridges Bicyle Traffic Analysis
+      </label>
+    
+    <a href="./" title="NYC East River Bridges Bicyle Traffic Analysis" class="md-nav__link md-nav__link--active">
+      NYC East River Bridges Bicyle Traffic Analysis
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#about-the-data" title="About the data" class="md-nav__link">
+    About the data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup" title="Setup" class="md-nav__link">
+    Setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reading-the-data" title="Reading the data" class="md-nav__link">
+    Reading the data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lets-do-a-sense-check-on-our-data" title="Let's do a sense check on our data" class="md-nav__link">
+    Let's do a sense check on our data
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analyzing-total-bridge-traffic" title="Analyzing total bridge traffic" class="md-nav__link">
+    Analyzing total bridge traffic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#looking-at-ridership-by-day-of-week" title="Looking at ridership by day of week" class="md-nav__link">
+    Looking at ridership by day of week
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ridership-by-month-of-year" title="Ridership by month of year" class="md-nav__link">
+    Ridership by month of year
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-tough-are-nyc-east-river-bridge-cyclists" title="How tough are NYC East River bridge cyclists?" class="md-nav__link">
+    How tough are NYC East River bridge cyclists?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../failed_banks/" title="Failed Banks Analysis" class="md-nav__link">
+      Failed Banks Analysis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ge_corn/" title="Genetically Engineered Corn" class="md-nav__link">
+      Genetically Engineered Corn
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../links/" title="Links" class="md-nav__link">
+      Links
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#about-the-data" title="About the data" class="md-nav__link">
+    About the data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup" title="Setup" class="md-nav__link">
+    Setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reading-the-data" title="Reading the data" class="md-nav__link">
+    Reading the data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lets-do-a-sense-check-on-our-data" title="Let's do a sense check on our data" class="md-nav__link">
+    Let's do a sense check on our data
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analyzing-total-bridge-traffic" title="Analyzing total bridge traffic" class="md-nav__link">
+    Analyzing total bridge traffic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#looking-at-ridership-by-day-of-week" title="Looking at ridership by day of week" class="md-nav__link">
+    Looking at ridership by day of week
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ridership-by-month-of-year" title="Ridership by month of year" class="md-nav__link">
+    Ridership by month of year
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-tough-are-nyc-east-river-bridge-cyclists" title="How tough are NYC East River bridge cyclists?" class="md-nav__link">
+    How tough are NYC East River bridge cyclists?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>NYC East River Bridges Bicyle Traffic Analysis</h1>
+                
+                <p>New York City has quite a few interesting data sets. Earlier this year, I stayed in a hotel in Mahattan near the Williamsburg Bridge. It's an amazing site to see the number of cyclists commuting every morning there. This project takes some of the data collected by NYC DOT from April through October 2016 and examines some of the interesting data points.</p>
+<h3 id="about-the-data">About the data</h3>
+<p>This data is available on NYC's <a href="https://data.cityofnewyork.us/Transportation/Bicycle-Counts-for-East-River-Bridges/gua4-p9wg">OpenData</a> website. Sweet. That was easy! Of course, nothing in data analysis is ever easy, and this data is no different. What the folks at NYC DOT went ahead and did was to place each month's collected data in a formatted Excel sheet and also add some analysis in there for good measure. Awesome!</p>
+<p><img alt="Spreadsheet Example" src="../../img/NYC_bridge_sheet.png" /></p>
+<p>So not only do we have data that is in a messy spreadsheet, it's across multiple spreadsheets - one for each month!</p>
+<h3 id="setup">Setup</h3>
+<p>As for most projects that poke at these sorts of data sets, I'm using a Jupyter Notebook. I've extracted all of the downloaded Excel files to a directory and created a notebook in the same directory.</p>
+<h3 id="reading-the-data">Reading the data</h3>
+<p>Our first chore is munging the data. Some folks hate this part of analysis, but it's rare that one does not have to clean the data, so why not embrace it?!</p>
+<p><strong>Import the libraries we'll need</strong></p>
+<pre><code>import pandas as pd
+import os
+from matplotlib import pyplot as plt
+import numpy as np
+</code></pre>
+
+<p><strong>List the contents of our working directory</strong></p>
+<pre><code>path = os.getcwd()
+files = os.listdir(path)
+files
+</code></pre>
+
+<p>This should yield something like:</p>
+<pre><code>['05 May 2016 Cyclist Numbers for Web.xlsx',
+ 'Bicycle Counts for East River Bridges Metadata.docx',
+ '07 July 2016 Cyclist Numbers for Web.xlsx',
+ 'NYC East River Bicycle Analysis.ipynb',
+ '08 August 2016 Cyclist Numbers for Web.xlsx',
+ '06 June 2016 Cyclist Numbers for Web.xlsx',
+ '09 September 2016 Cyclist Numbers for Web.xlsx',
+ '10 October 2016 Cyclist Numbers for Web.xlsx',
+ '04 April 2016 Cyclist Numbers for Web.xlsx',
+ '.ipynb_checkpoints']
+</code></pre>
+
+<p><strong>Obtain a list of the file names</strong><br />
+The above is a nice list, but it contains files other than our Excel file. We'll use a list comprehension to iterate over the files in the current working directory to return a list of only files witht he ".xlsx" extension.</p>
+<pre><code>xlsx_files = [f for f in files if f[-4:] == 'xlsx']
+xlsx_files.sort() # for my ocd
+xlsx_files
+</code></pre>
+
+<p>And now we have:</p>
+<pre><code>['04 April 2016 Cyclist Numbers for Web.xlsx',
+ '05 May 2016 Cyclist Numbers for Web.xlsx',
+ '06 June 2016 Cyclist Numbers for Web.xlsx',
+ '07 July 2016 Cyclist Numbers for Web.xlsx',
+ '08 August 2016 Cyclist Numbers for Web.xlsx',
+ '09 September 2016 Cyclist Numbers for Web.xlsx',
+ '10 October 2016 Cyclist Numbers for Web.xlsx']
+</code></pre>
+
+<p><strong>Shoving the data into a Pandas Dataframe</strong><br />
+So we have our list of files. Now it's time to create a Pandas Dataframe, iterate over each file, and add the content to the dataframe. If you recall from the view of the spreadsheet, these files have other information that is not raw data in them. We'll use some of Pandas built-in features to help us import only the rows we want.</p>
+<pre><code>df = pd.DataFrame()
+for f in xlsx_files:
+    data = pd.read_excel(f, header=5, index=1, parse_cols='B:K', skip_footer=8)
+    df = df.append(data)
+</code></pre>
+
+<h2 id="lets-do-a-sense-check-on-our-data">Let's do a sense check on our data</h2>
+<p><code>df.head()</code>
+<img alt="Dataframe Head" src="../../img/df_head.png" /></p>
+<pre><code>df.shape
+(214, 10)
+</code></pre>
+
+<p>So the headers and first few rows look good. The shape of our dataframe shows the correct number of columns and about the right number of rows, but let's just go ahead and count the days of the months being analyzed as a little safety check:  </p>
+<pre><code>April - 30 days
+May - 31 days
+June - 30 days
+July - 31 days
+August - 31 days
+September - 30 days
+October - 31 days
+TOTAL: 214 days 
+</code></pre>
+
+<p>Sweet! I'd say we are in business! One quick observation of the first few rows shows a couple of surprises. We can see (without even inspecting data types) that both the 'Brooklyn Bridge' and 'Total' columns are floats, even though we would expect integer types. Let's cast those as ints now so our data behaves as we would expect.</p>
+<pre><code>df['Brooklyn Bridge'] = df['Brooklyn Bridge'].astype(int)
+df['Total'] = df['Total'].astype(int)
+</code></pre>
+
+<p><img alt="Dataframe head after data type casting" src="../../img/df_head_casted.png" />
+OK. That looks better. That 'Precipitation' column is looking like it might be tricky as it's currently a string type, but we'll figure that out later.  </p>
+<h3 id="analyzing-total-bridge-traffic">Analyzing total bridge traffic</h3>
+<p>With a tidy dataframe, we can now start poking at the data a bit. First question that came to my mind looking at the data was "What is the breakdown of bicycles over the various bridges?"  </p>
+<p>We'll aggregate just the bridge columns into a new dataframe and sum the totals.</p>
+<pre><code>bridges = df[['Brooklyn Bridge', 'Manhattan Bridge', 'Williamsburg Bridge', 'Queensboro Bridge']]
+bridge_totals = bridges.sum().values
+</code></pre>
+
+<p>Let's plot the data:</p>
+<pre><code># Data to plot
+labels = list(bridges.columns)
+sizes = bridge_totals
+colors = ['gold', 'yellowgreen', 'lightcoral', 'lightskyblue']
+explode = (0, 0, 0.1, 0)  # explode 1st slice
+
+# Plot
+plt.pie(sizes, explode=explode, labels=labels, colors=colors,
+        autopct='%1.1f%%', shadow=True, startangle=140)
+
+plt.axis('equal')
+plt.show()
+</code></pre>
+
+<p><img alt="Bridge Totals" src="../../img/bridge_totals.png" />
+I wasn't exactly surprised by this chart. The Williamsburg bridge is certainly very busy! Also, for anyone that's ever walked or biked across the Brooklyn Bridge - it's understandable why the numbers aren't as high!</p>
+<h3 id="looking-at-ridership-by-day-of-week">Looking at ridership by day of week</h3>
+<p>Something that might be interesting would be ridership totals over all four bridges by day of the week.
+I'm sure there's a better way to do this, but when I examine datetime type of data, I will usually create a new column with the data that I seek for easy analysis. So in this case, I'll use Pandas built-in method of parsing the day of the week from datetime objects and add that to a new column.  </p>
+<p><code>df['Day_Of_Week'] = df.Date.dt.dayofweek</code></p>
+<p><img alt="New Dataframe with dayofweek" src="../../img/day_of_week.png" /> </p>
+<pre><code># add column for day of week. Monday=0, Sunday=6
+day_of_week_totals = df.groupby(['Day_Of_Week'])['Total'].sum()
+day_of_week_totals
+</code></pre>
+
+<pre><code>Day_Of_Week
+0    601202
+1    623466
+2    672666
+3    623433
+4    557519
+5    465018
+6    425205
+</code></pre>
+
+<p>The above groups by 'Day of Week' and then sums the total. Let's chart our data:</p>
+<pre><code># Data to plot
+fig = plt.figure(figsize=(10,5))
+
+labels = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+y_pos = np.arange(len(labels))
+totals = list(day_of_week_totals)
+
+plt.bar(y_pos, totals, align='center', alpha=0.5)
+plt.xticks(y_pos, labels)
+plt.ylabel('# of rides')
+
+plt.show()
+</code></pre>
+
+<p><img alt="Ridership by Day of Week" src="../../img/day_of_week_ridership_chart.png" /></p>
+<p>Perhaps, from the data above, we might surmise that much of the bicyle traffic is communing to and from work.</p>
+<h3 id="ridership-by-month-of-year">Ridership by month of year</h3>
+<p>Like above, we'll create a new column that contains the month of the year, group the data by that and sum the totals.</p>
+<pre><code>df['Month'] = df.Date.dt.month
+monthly_totals = df.groupby(['Month'])['Total'].sum()
+
+# Data to plot
+fig = plt.figure(figsize=(10,5))
+
+labels = ['APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT']
+y_pos = np.arange(len(labels))
+totals = list(monthly_totals)
+
+plt.bar(y_pos, totals, align='center', alpha=0.5, color='g')
+plt.xticks(y_pos, labels)
+plt.ylabel('# of rides')
+
+plt.show()
+</code></pre>
+
+<p><img alt="Ridership by Month of Year" src="../../img/month_of_year_ridership_chart.png" /></p>
+<h3 id="how-tough-are-nyc-east-river-bridge-cyclists">How tough are NYC East River bridge cyclists?</h3>
+<p>Let's determine if precipitation affects ridership. As noted previously, the 'Precipitation' column is not without drama. An 's' was used by the data collectors to indicate when the precipitation involved snow. Thank makes our analysis a bit tricky. So we'll make a judgement call and say either there was precipitation or not.</p>
+<pre><code>sunshine = df.loc[df['Precipitation'] == 0]
+sunshine_total = sunshine['Total'].sum()
+
+its_raining = df.loc[df['Precipitation'] != 0]
+its_raining_total = its_raining['Total'].sum()
+
+# Data to plot
+labels = 'Sunny(ish)', &quot;It's Raining/Snowing&quot;
+totals = [sunshine_total, its_raining_total]
+colors = ['gold', 'lightblue']
+explode = (0, 0.1)  # explode 1st slice
+
+# Plot
+plt.pie(totals, explode=explode, labels=labels, colors=colors,
+        autopct='%1.1f%%', shadow=True, startangle=100)
+
+plt.axis('equal')
+plt.show()
+</code></pre>
+
+<p><img alt="Precipitation and Ridership" src="../../img/precipitation_and_ridership_chart.png" /></p>
+<p>I don't think there's any surprises there - no disrespect NYC cyclists! I hope you enjoyed exploring this data! </p>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../Raspberry_Pi/picam/" title="Pi Camera" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Pi Camera
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../failed_banks/" title="Failed Banks Analysis" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Failed Banks Analysis
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2017 Mike Moran
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application-f3ab9e5ff8.js"></script>
+      
+      
+      <script>app.initialize({url:{base:"../.."}})</script>
+      
+    
+    
+      
+      <script>!function(e,t,a,n,o,c,i){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,c=t.createElement(a),i=t.getElementsByTagName(a)[0],c.async=1,c.src=n,i.parentNode.insertBefore(c,i)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-105682879-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var t=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",t,e.href)})});var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})</script>
+      
+    
+  </body>
+</html>
